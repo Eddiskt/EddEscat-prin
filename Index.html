@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulación del Movimiento Armónico Simple</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1>Simulación: Movimiento Armónico Simple</h1>
+
+  <!-- Panel de controles para definir condiciones iniciales y parámetros -->
+  <div id="controls">
+    <label for="x0">Posición inicial (x₀):</label>
+    <input type="number" id="x0" value="1" step="0.1">
+    &nbsp;
+    <label for="v0">Velocidad inicial (v₀):</label>
+    <input type="number" id="v0" value="0" step="0.1">
+    &nbsp;
+    <label for="omega">Frecuencia angular (ω):</label>
+    <input type="number" id="omega" value="2" step="0.1">
+    &nbsp;
+    <button onclick="setParameters()">Iniciar simulación</button>
+  </div>
+
+  <!-- Panel calculadora que muestra datos numéricos relevantes -->
+  <div id="calculator">
+    <p>Periodo (T): <span id="period"></span> s</p>
+    <p>Posición actual: <span id="currentX"></span></p>
+    <p>Velocidad actual: <span id="currentV"></span></p>
+    <p>Energía potencial (½k x²): <span id="potentialE"></span></p>
+    <p>Energía cinética (½m v²): <span id="kineticE"></span></p>
+    <p></p><button onclick="toggleSim()" id="pauseBtn">Pausar</button></p>
+  </div>
+
+  <!-- Contenedores de los gráficos -->
+  <div id="container">
+    <canvas id="timeCanvas" width="500" height="400"></canvas>
+    <canvas id="phaseCanvas" width="500" height="400"></canvas>
+  </div>
+
+  <script src="index.js"></script><br><br>
+
+  <button onclick="cargarVTVT()">Mostrar simulación vtvt</button>
+
+  <div id="contenedorVTVT"></div>
+</body>
+
+</html>

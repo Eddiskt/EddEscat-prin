@@ -1,0 +1,86 @@
+.canvas-wrapper {
+    display: block;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.canvas-wrapped {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 42em) {
+    .canvas-wrapped {
+        width: 90vmin;
+        height: 90vmin;
+    }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .canvas-wrapped {
+        width: 75vmin;
+        height: 75vmin;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .canvas-wrapped {
+        width: 65vmin;
+        height: 65vmin;
+    }
+}
+
+body {
+    background: #121212;
+    color: #f0f0f0;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.canvas-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+canvas {
+    background-color: #2f2e2e;
+    border: 2px solid #e3c3c9;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+}
+
+.slidercontainer {
+    margin: 10px 0;
+}
+
+label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 200px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4db8ff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3498db;
+}
